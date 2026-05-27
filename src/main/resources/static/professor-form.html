@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Professor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-secondary">
+    <div id="header"></div>
+    <main class="flex-grow-1 d-flex align-items-center py-5 page-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 id="tituloPagina" class="text-center mb-4">Cadastro de Professor</h2>
+                            <form id="form" onsubmit="salvarProfessor(event)">
+                                <input type="hidden" id="id" name="id" value="0" />
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="nome">Nome</label>
+                                            <input id="nome" name="nome" maxlength="100" class="form-control" type="text" spellcheck="false" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input id="email" name="email" maxlength="120" class="form-control" type="email" spellcheck="false" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="senha">Senha</label>
+                                            <input id="senha" name="senha" maxlength="45" class="form-control" type="password" spellcheck="false" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2 mt-3">
+                                    <button class="btn btn-primary" type="submit"><span id="textoBotao">Cadastrar</span></button>
+                                    <a href="professores.html" class="btn btn-secondary">Voltar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="public/js/api.js"></script>
+    <script src="public/js/professores.js"></script>
+    <script>initLayout("professores"); carregarProfessorForm();</script>
+</body>
+</html>

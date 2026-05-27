@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-secondary">
+    <div id="header"></div>
+    <main class="flex-grow-1 py-5 page-bg">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="text-light mb-1">Professores</h1>
+                    <p class="text-light mb-0">Gerencie os professores cadastrados.</p>
+                </div>
+                <a href="professor-form.html" class="btn btn-light">Novo professor</a>
+            </div>
+            <div class="card shadow border-0 rounded-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead><tr><th>ID</th><th>Nome</th><th>Email</th><th>Curso</th><th class="text-end">Ações</th></tr></thead>
+                            <tbody id="tabelaProfessores"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="public/js/api.js"></script>
+    <script src="public/js/professores.js"></script>
+    <script>initLayout("professores"); carregarProfessores();</script>
+</body>
+</html>

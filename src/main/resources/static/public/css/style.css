@@ -1,0 +1,42 @@
+:root {
+    --gc-bg: #6c757d;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.page-bg {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    min-height: calc(100vh - 128px);
+}
+
+.navbar-brand {
+    letter-spacing: .5px;
+}
+
+.card-menu {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-menu:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2) !important;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+textarea.form-control {
+    min-height: 120px;
+}
+
+.small-muted {
+    font-size: .9rem;
+    color: #6c757d;
+}
